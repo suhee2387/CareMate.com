@@ -1,0 +1,121 @@
+@import url('https://fonts.googleapis.com/css2?family=Jua&family=Noto+Sans+KR:wght@100;300;400;500;700;900&display=swap');
+/* 초기화 코드 */
+body, h1, h2, h3, h4, h5, h6, ul, ol, dl, p{
+    margin: 0;
+    padding: 0;
+}
+
+body{
+    font-family: 'Varela Round', sans-serif;
+    font-weight: 500;
+    text-align: center;
+    word-break: keep-all;
+    font-size: 18px;
+    
+}
+
+.blind{
+    display: none;
+}
+/* -------------------------------header------------------------------ */
+/* logo */
+header {
+    z-index: 1;
+    top:0;
+    left:0;
+    width: 100%;
+    height: 80px;
+    
+}
+header a{
+    color: #fff;
+    text-decoration: none;
+}
+header .logo a{
+    /* border: 1px solid red; */
+    /* box-sizing: border-box; */
+    display: inline-block;
+    float: left;
+    display: block;
+    width: 160px;
+    height: 40px;
+    margin:22px 0;
+    /* background-image: url("../img/roudding_logo.png"); */
+    /* background-size: 100% 100%; */
+    background-repeat: no-repeat;
+font-size: 30px;
+    font-weight: 800s
+   
+}
+.orange{
+    background-color: #FF812D;
+}
+/* 메뉴 */
+
+.inner {
+        width: 80%;
+        margin: 0 auto;
+}
+
+header .mainMenu {
+    text-align: center;
+    box-sizing: border-box;
+     /* border: 1px solid blue; */
+     display: inline-block;
+     float: right;
+     margin-top: 18px;
+
+}
+
+header .mainMenu li {
+       display: inline-block;
+       margin-left: 30px;
+       padding: 0 5px;
+       /* border: 1px solid red; */
+   }
+header .mainMenu li a{
+    font-weight: 700;
+    text-decoration: none;
+    /* border: 1px solid rgb(0, 255, 170); */
+    box-sizing: border-box;
+    height: 48px;
+    line-height:50px;
+    font-size: 1.167em;
+    padding-left: 3px;
+    padding-right: 3px;
+    /* border-bottom: 3px solid transparent; */
+}
+/* 스크롤 메뉴 */
+.scroll_01{  background-color: #FF812D;}
+/* 아래로 스크롤하면 배경이 사라지고 위로 스크롤 하면 배경이 생깁니다. */
+.scroll_01{ position:fixed;left:50%;width:100%;padding:0;text-align:center;transform:translate(-50%);transition:all .3s}
+li a span{
+    display:inline-block;
+    position:relative;
+    vertical-align:top;
+    height: 40px;
+}
+li a span::after{
+    content:'';
+    display:block;
+    position:absolute;
+    bottom:-8px;
+    left:0;
+    width:0;
+    height:0;
+    border-top:3px solid #fff;
+    pointer-events:none;
+    transition:width 100ms cubic-bezier(0.455, 0.030, 0.515, 0.955);
+    -webkit-transition:width 200ms cubic-bezier(0.455, 0.030, 0.515, 0.955);
+    -moz-transition:width 200ms cubic-bezier(0.455, 0.030, 0.515, 0.955);
+    -ms-transition:width 200ms cubic-bezier(0.455, 0.030, 0.515, 0.955);
+    -o-transition:width 200ms cubic-bezier(0.455, 0.030, 0.515, 0.955);
+}
+li a:hover span::after{
+    width:100%;
+    transition:width 240ms cubic-bezier(0.445, 0.050, 0.550, 0.950);
+    -webkit-transition:width 240ms cubic-bezier(0.445, 0.050, 0.550, 0.950);
+    -moz-transition:width 240ms cubic-bezier(0.445, 0.050, 0.550, 0.950);
+    -ms-transition:width 240ms cubic-bezier(0.445, 0.050, 0.550, 0.950);
+    -o-transition:width 240ms cubic-bezier(0.445, 0.050, 0.550, 0.950);
+}
